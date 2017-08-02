@@ -32,7 +32,7 @@ def my_form_post():
     hostname = request.form['text']
 
     password_manager = urllib2.HTTPPasswordMgrWithDefaultRealm()
-    password_manager.add_password(None, 'http://spectrum1.qualcomm.com/spectrum/restful/models', username, password)
+    password_manager.add_password(None, 'spectrum rest url', username, password)
     auth_handler = urllib2.HTTPBasicAuthHandler(password_manager)
     opener = urllib2.build_opener(auth_handler)
     urllib2.install_opener(opener)
