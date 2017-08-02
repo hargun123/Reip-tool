@@ -1,3 +1,14 @@
+#!usr/bin/python
+###################################################
+#                                                 #  
+#     CAPM-CA SPECTRUM Re-IP tool ver 1.0         #
+#                                                 #
+#              Author-Ajay Kumar                  #
+#              Dated Aug 02, 2017                 #
+#                                                 #
+#                                                 #
+###################################################
+
 from flask import Flask
 from flask import request
 from flask import render_template
@@ -65,9 +76,9 @@ def my_form_post():
     test1=pat1.search(result1)
     mh = test.group(2)
     Old_ip = test1.group(0)
-    model_handle=mh.replace('"',"" )
+    key=mh.replace('"',"" )
     global temp
-    temp = model_handle
+    temp = key
 
     specOld = "Existing IP address in CA Spectrum: %s" % Old_ip
 
